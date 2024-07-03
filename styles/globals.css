@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"); */
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --that_green: #004343;
+  --brown: rgb(36, 16, 8);
+  --lemon: #adf802;
+}
+
+@layer base {
+  [data-nextjs-scroll-focus-boundary] {
+    display: contents;
+  }
+}
+
+html, body {
+  overflow-x: hidden;
+  /* background-color: #000925; */
+  width: 100%;
+}
+
+
+.button {
+  padding: 12px 4px;
+  width: 100%;
+  margin-top: 12px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.btn-disabled {
+  background-color: lightgray;
+  color: #000000;
+}
+ul li,
+.medText {
+  font-family: "Plus Jakar", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  list-style: none;
+}
+
+.icon {
+  display: flex;
+  transition: 1s ease-out;
+}
+
+.logos {
+  /* border: 1px solid var(--secondary); */
+  display: flex;
+  align-items: center;
+}
+
+/* li {
+  list-style-type: none;
+  cursor: pointer;
+  margin: 9px 0;
+  padding: 16px 8px;
+  color: #000105;
+  border: 1px solid lightgray;
+}
+
+.li-hover:hover {
+  background-color: #d8d8d8;
+  columns: #fff;
+}
+
+.li-selected {
+  color: #fff;
+  background-color: #000925;
+} */
+
+.quiz-container {
+  background-color: #f8f8f8;
+  padding: 1rem;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.container p {
+  padding: 8px 0;
+}
+
+
+.auth-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.auth-popup {
+  background-color: white;
+  padding: 3px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+}
+
+.close-popup-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: red;
+  color: white;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* .button:hover {
+  background-color: #155a8a;
+} */
+
+
+
+/* -------------------------------------------- */
+/*------------------ scrollbar */
+/* -------------------------------------------- */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  /* display: none; */
+  border-radius: 1rem;
+  /* background: rgba(220, 146, 73, 1); */
+  transition: all 0.5s ease-in-out;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #90050F;
+}
+
+::-webkit-scrollbar-track {
+  background: #ffffff84;
+} /**/
