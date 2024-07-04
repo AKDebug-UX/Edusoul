@@ -41,7 +41,7 @@ const Navbar = ({ children }) => {
     <div
       className={`${
         isScrolled || sideNav ? "bg-white" : "bg-white"
-      } fixed border-b w-full h-[60px] sm:h-[80px] px-3 md:px-6 lg:px-10 shadow-lg  z-50 flex flex-row justify-between items-center`}
+      } fixed border-b w-full h-[60px] sm:h-[80px] px-3 md:px-8 lg:px-12 shadow-lg  z-50 flex flex-row justify-between items-center`}
     >
       <motion.nav
         initial={{ x: 0 }}

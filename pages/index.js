@@ -4,6 +4,7 @@ import Link from 'next/link';
 
 import Navbar from '@/Components/shared/NavBar/nav';
 import Footer from '@/Components/shared/Footer';
+import HeroSection from '@/Components/Hero/hero';
 
 export default function App() {
   const router = useRouter();
@@ -25,11 +26,7 @@ export default function App() {
     <>
       <Navbar />
       <main className="pt-[4rem]">
-        <div className="flex flex-col px-3 pt-8 md:p-12 md:ml-[20em] h-full text-center gap-3 justify-start items-center">
-          <span className="text-[25px] md:text-[35px] text-white font-bold">
-            Pratice Past and Possible Examination Questions
-          </span>
-        </div>
+        <HeroSection />
       </main>
       <Footer />
     </>
