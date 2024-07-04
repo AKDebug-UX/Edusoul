@@ -6,7 +6,7 @@ import LocalLibraryIcon from '@mui/icons-material/LocalLibrary';
 export const navdata = [
   {
     imgURL: <Home />,
-    route: "/courses",
+    route: "#courses",
     label: "Courses",
   },
   {
@@ -16,17 +16,17 @@ export const navdata = [
   },
   {
     imgURL: <AutoStoriesIcon />,
-    route: "/",
+    route: "#our-mandate",
     label: "Our Mandate",
   },
   {
     imgURL: <LocalLibraryIcon/>,
-    route: "/modules",
+    route: "#modules",
     label: "Modules",
   },
   {
     imgURL: <LocalLibraryIcon/>,
-    route: "/faq",
+    route: "#faq",
     label: "FAQ",
   },
 ];

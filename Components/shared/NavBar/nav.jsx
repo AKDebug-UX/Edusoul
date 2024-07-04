@@ -13,6 +13,7 @@ import { useRouter } from "next/router";
 const Navbar = ({ children }) => {
   const [sideNav, setSideNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [sticky, setSticky] = useState(false);
   const { imageLoader } = useFunctions();
 
   const router = useRouter();
@@ -37,8 +38,16 @@ const Navbar = ({ children }) => {
     };
   }, [handleScroll]);
 
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      const nav = document.querySelector("nav");
+      window.scrollY > 0 ? setSticky(true) : setSticky(false);
+    });
+  }, []);
+
+
   return (
-    <div
+    <nav
       className={`${
         isScrolled || sideNav ? "bg-white" : "bg-white"
       } fixed border-b w-full h-[60px] sm:h-[80px] px-3 md:px-8 lg:px-12 shadow-lg  z-50 flex flex-row justify-between items-center`}
@@ -68,12 +77,12 @@ const Navbar = ({ children }) => {
             className="md:flex flex-row hidden gap-2"
           >
             {navdata.map((link) => {
-              const isActive = pathname === link.route;
+              const sticky = pathname === link.route;
 
               return (
                 <li
                   key={link.label}
-                  className={` ${isActive ? "text-primary" : "text-black"}`}
+                  className={` ${sticky ? "text-primary" : "text-black"}`}
                 >
                   <Link
                     href={link.route}
@@ -111,7 +120,7 @@ const Navbar = ({ children }) => {
         )}
       </button>
       {sideNav && <SideNavMobile setSideNav={setSideNav} />}
-    </div>
+    </nav>
   );
 };
 
