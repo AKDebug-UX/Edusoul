@@ -14,22 +14,23 @@ export default function Footer({ mobile }) {
   return (
     <>
       <section
-        className="w-full h-72 px-20 bg-gray flex-col justify-center items-start border-t inline-flex"
+        className="w-full md:h-72 px-5 md:px-12 bg-gray flex-col justify-center items-start border-t inline-flex"
         id="footer"
       >
-        <div className="self-stretch py-3 border-b border-slate-200 justify-between items-center gap-3 inline-flex">
-          <div className="w-24 h-16 bg-white justify-center items-center flex">
+        <div className="flex flex-col md:flex-row md:w-full py-3 border-b border-slate-200 justify-between items-start md:items-center gap-3">
+          <div className="w-[24vh] h-[16vh] bg-white justify-center items-center flex">
             <Image
               loader={imageLoader}
               alt="logo"
-              width={80}
-              height={40}
+              width={200}
+              height={60}
               quality={100}
               className=""
               src="/assets/images/edusoul.svg"
             />
           </div>
-          <div className="flex w-auto flex-row gap-4 justify-center items-center">
+          
+          <div className="flex flex-col md:flex-row w-auto gap-4 justify-center items-start md:items-center">
             <div className="h-11 py-3 justify-start items-center gap-2 flex">
               <div className="text-slate-900 text-base font-normal font-['Roboto'] leading-snug">
                 Our Courses
@@ -58,34 +59,35 @@ export default function Footer({ mobile }) {
           </div>
         </div>
 
-        <div className="self-stretch py-3 justify-between items-center gap-12 inline-flex">
-          <div className="grow shrink basis-0 text-slate-900 text-base font-normal font-['Roboto'] leading-snug">
+        <div className="flex flex-col-reverse md:flex-row w-full py-3 justify-between items-start md:items-center gap-4 md:gap-12">
+          <div className="w-full text-slate-900 text-base font-normal font-['Roboto'] leading-snug">
             @ 2024 Edusoul. All rights reserved.
           </div>
-          <div className="flex w-auto flex-row gap-4 justify-center items-center">
-            <div className="py-3 justify-start items-center gap-2 flex">
-              <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
-                Terms
+
+          <div className="flex w-full flex-row gap-12 justify-between items-center">
+            <div className="flex w-auto flex-row gap-4 justify-center items-center">
+              <div className="py-3 justify-start items-center gap-2 flex">
+                <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
+                  Terms
+                </div>
+              </div>
+              <div className="py-3 justify-start items-center gap-2 flex">
+                <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
+                  Privacy
+                </div>
+              </div>
+              <div className="py-3 justify-start items-center gap-2 flex">
+                <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
+                  Contact
+                </div>
               </div>
             </div>
-            <div className="py-3 justify-start items-center gap-2 flex">
-              <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
-                Privacy
-              </div>
+
+            <div className="justify-end items-center gap-4 flex">
+              <LinkedInIcon />
+              <TwitterIcon />
+              <InstagramIcon />
             </div>
-            <div className="py-3 justify-start items-center gap-2 flex">
-              <div className="text-slate-600 text-base font-normal font-['Roboto'] leading-snug">
-                Contact
-              </div>
-            </div>
-          </div>
-          
-          <div className="justify-end items-center gap-4 flex">
-            <LinkedInIcon />
-            <TwitterIcon />
-            <InstagramIcon />
-            <div className="w-6 h-6 relative" />
-            <div className="w-6 h-6 px-0.5 py-0.5 justify-center items-center flex" />
           </div>
         </div>
       </section>

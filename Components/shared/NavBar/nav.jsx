@@ -11,7 +11,6 @@ import SideNavMobile from "./sidenavmobile";
 import { useRouter } from "next/router";
 
 const Navbar = ({ children }) => {
-  const [showmenu, setShowmenu] = useState(false);
   const [sideNav, setSideNav] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { imageLoader } = useFunctions();
@@ -21,9 +20,6 @@ const Navbar = ({ children }) => {
   const gray = router.pathname === "/about";
 
   const controls = useAnimation();
-  const hideMenu = useCallback(() => {
-    setShowmenu(false);
-  }, []);
 
   const handleScroll = useCallback(() => {
     const scrollTop = window.scrollY;
@@ -52,13 +48,13 @@ const Navbar = ({ children }) => {
         animate={{ x: [200, 0] }}
         className="flex flex-row mx-auto gap-8 justify-start items-center w-full"
       >
-        <div className="flex justify-center items-center">
+        <div className="flex w-[24vh] h-[16vh] justify-start items-center">
           <Link href={"/"}>
             <Image
               loader={imageLoader}
               alt="logo"
-              width={80}
-              height={40}
+              width={140}
+              height={60}
               quality={100}
               className=""
               src="/assets/images/edusoul.svg"
@@ -97,24 +93,24 @@ const Navbar = ({ children }) => {
         animate={{ width: "17%" }}
         // transition={{ type: "spring", stiffness: 500, duration: 0.1 }}
         transition={{ duration: 0.2 }}
-        className="icon flex w-[40%] lg:w-[20%] justify-around  items-center"
+        className="md:flex w-[15em] md:w-[20%] justify-end hidden items-center"
       >
-        <button className="font-bold bg-primary text-white hover:bg-gray-100 hover:text-primary py-3 text-center w-full lg:w-[15em] rounded-md">
+        <button className="font-bold bg-primary text-white hover:bg-gray-100 hover:text-primary py-3 text-center w-full md:w-[15em] rounded-md">
           Get Started
         </button>
       </motion.div>
 
-      <div
+      <button
         onClick={() => setSideNav(!sideNav)}
-        className="text-white flex lg:hidden"
+        className="text-primary text-[4vh] flex md:hidden"
       >
         {sideNav ? (
-          <IoCloseSharp className="text-[3vh]" />
+          <IoCloseSharp className="" />
         ) : (
-          <MdOutlineMenu className="text-[3vh]" />
+          <MdOutlineMenu className="" />
         )}
-      </div>
-      {sideNav && <SideNavMobile setShowmenu={setShowmenu} />}
+      </button>
+      {sideNav && <SideNavMobile setSideNav={setSideNav} />}
     </div>
   );
 };
