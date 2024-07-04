@@ -6,7 +6,7 @@ export default function Document() {
       <Head>
         <meta
           name='description'
-          content="Get ready for BrainBash, where your wits are put to the test! Answer challenging questions, and prove you're the smartest of them all."
+          content=""
         />
       </Head>
       <body className='m-0 p-0'>
