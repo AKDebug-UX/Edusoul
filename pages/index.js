@@ -6,6 +6,7 @@ import Navbar from '@/Components/shared/NavBar/nav';
 import Footer from '@/Components/shared/Footer';
 import HeroSection from '@/Components/Hero/hero';
 import Courses from '@/Components/shared/Courses';
+import CoreValues from '@/Components/CoreValues';
 
 export default function App() {
   const router = useRouter();
@@ -16,6 +17,7 @@ export default function App() {
       <main className="pt-[4rem]">
         <HeroSection />
         <Courses />
+        <CoreValues/>
       </main>
       <Footer />
     </>
